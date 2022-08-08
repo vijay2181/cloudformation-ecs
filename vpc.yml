@@ -37,7 +37,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
       - Key: Name
-        Value: !Sub ${EnvironmentName}:PublicSubnetOne
+        Value: !Sub ${EnvironmentName}:ECS-PublicSubnetOne
 
   PublicSubnetTwo:
     Type: AWS::EC2::Subnet
@@ -51,7 +51,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
       - Key: Name
-        Value: !Sub ${EnvironmentName}:PublicSubnetTwo
+        Value: !Sub ${EnvironmentName}:ECS-PublicSubnetTwo
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
