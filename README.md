@@ -1,4 +1,4 @@
-# Create AWS Network
+# Create AWS Infrastructure
 
 * VPC
 * 2 Public subnets in 2 different AZs
