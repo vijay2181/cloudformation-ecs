@@ -27,10 +27,9 @@ Parameters:
     Description: AMI ID
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id
-    Description: The Amazon Machine Image ID used for the cluster, leave it as the default value to get the latest AMI
+    #Description: The Amazon Machine Image ID used for the cluster, leave it as the default value to get the latest AMI
 
-Resources:
-  
+Resources:  
   # ECS Resources
   ECSCluster:
     Type: AWS::ECS::Cluster
