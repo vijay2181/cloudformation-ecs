@@ -23,7 +23,7 @@ Resources:
       CidrBlock: !FindInMap ['SubnetConfig', 'VPC', 'CIDR']
       Tags:
       - Key: Name
-        Value: !Sub ${EnvironmentName}:ECS-VPC
+        Value: !Sub ${EnvironmentName}:VPC
 
   PublicSubnetOne:
     Type: AWS::EC2::Subnet
@@ -37,7 +37,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
       - Key: Name
-        Value: !Sub ${EnvironmentName}:ECS-PublicSubnetOne
+        Value: !Sub ${EnvironmentName}:PublicSubnetOne
 
   PublicSubnetTwo:
     Type: AWS::EC2::Subnet
@@ -51,14 +51,14 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
       - Key: Name
-        Value: !Sub ${EnvironmentName}:ECS-PublicSubnetTwo
+        Value: !Sub ${EnvironmentName}:PublicSubnetTwo
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
     Properties:
        Tags:
          - Key: Name
-           Value: !Sub ${AWS::StackName}-Public-IGW
+           Value: !Sub ${EnvironmentName}:Public-IGW
   GatewayAttachement:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
@@ -71,7 +71,7 @@ Resources:
       VpcId: !Ref 'VPC'
       Tags:
         - Key: Name
-          Value: !Sub ${AWS::StackName}-Public-RT
+          Value: !Sub ${EnvironmentName}:Public-RT
   PublicRoute:
     Type: AWS::EC2::Route
     DependsOn: GatewayAttachement
