@@ -77,7 +77,7 @@ Resources:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: /
-      Roles: [ 'ecsInstanceRole' ]
+      Roles: [ 'EcsInstanceRole' ]
 
   
 
