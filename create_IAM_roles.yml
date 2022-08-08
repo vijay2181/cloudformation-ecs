@@ -59,6 +59,9 @@ Resources:
               - 'ecr:GetAuthorizationToken'
               - 'ecr:BatchGetImage'
               - 'ecr:GetDownloadUrlForLayer'
+              - 'ecr:BatchGetImage',
+              - 'logs:CreateLogStream',
+              - 'logs:PutLogEvents'
             Resource: '*'
 
   ECSRole:
