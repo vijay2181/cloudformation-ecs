@@ -23,7 +23,7 @@ Resources:
       CidrBlock: !FindInMap ['SubnetConfig', 'VPC', 'CIDR']
       Tags:
       - Key: Name
-        Value:  !Join ['', [!Ref "AWS::StackName", "-VPC" ]]
+        Value: !Sub ${EnvironmentName}:ECS-VPC
 
   PublicSubnetOne:
     Type: AWS::EC2::Subnet
