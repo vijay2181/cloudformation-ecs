@@ -3,7 +3,7 @@ Description: ECS cluster launchtype Fargate.
 Parameters:
   EnvironmentName:
     Type: String
-    Default: ecs-course
+    Default: ecs
     Description: "A name that will be used for namespacing our cluster resources."
 Resources:    
   ECSCluster:
