@@ -29,7 +29,7 @@ aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name ecs-v
 ```
 
 ```bash
-aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name ecs-task  --template-body file://./ecs-ec2-cfn.yml
+aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name ecs-ec2-task  --template-body file://./ecs-ec2-cfn.yml
 ```
 
 ```bash
@@ -37,7 +37,7 @@ aws cloudformation update-stack --stack-name ecs-vpc --template-body file://./vp
 ```
 
 ```bash
-aws cloudformation update-stack --stack-name ecs-vpc --template-body file://./ecs-ec2-cfn.yml
+aws cloudformation update-stack --stack-name ecs-ec2-task --template-body file://./ecs-ec2-cfn.yml
 ```
 
 ```bash
