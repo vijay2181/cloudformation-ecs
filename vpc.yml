@@ -3,7 +3,7 @@ Description: VPC and subnets
 Parameters:
   EnvironmentName:
     Type: String
-    Default: aws-cfn
+    Default: ecs
 
 Mappings:
   SubnetConfig:
@@ -37,7 +37,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
       - Key: Name
-        Value: !Sub ${AWS::StackName}-Public-One
+        Value: !Sub ${EnvironmentName}:PublicSubnetOne
 
   PublicSubnetTwo:
     Type: AWS::EC2::Subnet
@@ -51,7 +51,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
       - Key: Name
-        Value: !Sub ${AWS::StackName}-Public-Two
+        Value: !Sub ${EnvironmentName}:PublicSubnetTwo
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
