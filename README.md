@@ -49,6 +49,10 @@ aws cloudformation update-stack --stack-name ecs-ec2-task --template-body file:/
 ```
 
 ```bash
+aws cloudformation update-stack --stack-name ecs-ec2-task --template-body file://./create_IAM_roles.yml
+```
+
+```bash
 aws cloudformation delete-stack --stack-name aws-cfn && aws cloudformation delete-stack --stack-name ecs-ec2-cfn.yml
 ```
 
