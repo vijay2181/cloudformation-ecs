@@ -3,7 +3,7 @@ Description: ECS cluster launchtype EC2.
 Parameters:
   EnvironmentName:
     Type: String
-    Default: ecs-cfn
+    Default: aws-cfn
     Description: "A name that will be used for namespacing all cluster resources."
   InstanceType:
     Description: EC2 instance type
@@ -48,8 +48,8 @@ Resources:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
       VPCZoneIdentifier:
-        - Fn::ImportValue: !Sub ${EnvironmentName}:PublicSubnetOne
-        - Fn::ImportValue: !Sub ${EnvironmentName}:PublicSubnetTwo
+        - Fn::ImportValue: !Sub ${EnvironmentName}:Public-One
+        - Fn::ImportValue: !Sub ${EnvironmentName}:Public-Two
       LaunchConfigurationName: !Ref 'ContainerInstances'
       MinSize: '1'
       MaxSize: !Ref 'MaxSize'
