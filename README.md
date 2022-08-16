@@ -32,6 +32,11 @@ cfn-lint create_IAM_roles.yml
 aws cloudformation create-stack --capabilities CAPABILITY_NAMED_IAM --stack-name ecs-iam  --template-body file://./create_IAM_roles.yml
 ```
 
+> creates four roles with policies
+
+![image](https://user-images.githubusercontent.com/66196388/184866623-18d7b2aa-9bcc-4b23-b77b-3c6d5c1e66b5.png)
+
+
 ```bash
 aws cloudformation create-stack --stack-name ecs-vpc --template-body file://./vpc.yml
 ```
