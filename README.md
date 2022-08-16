@@ -29,15 +29,15 @@ cfn-lint create_IAM_roles.yml
 ```
 
 ```bash
-aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name ecs-vpc --template-body file://./vpc.yml
+aws cloudformation create-stack --capabilities CAPABILITY_NAMED_IAM --stack-name ecs-iam  --template-body file://./create_IAM_roles.yml
 ```
 
 ```bash
-aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name ecs-iam  --template-body file://./create_IAM_roles.yml
+aws cloudformation create-stack --stack-name ecs-vpc --template-body file://./vpc.yml
 ```
 
 ```bash
-aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name ecs-ec2-task  --template-body file://./ecs-ec2-cfn.yml
+aws cloudformation create-stack --stack-name ecs-ec2-task  --template-body file://./ecs-ec2-cfn.yml
 ```
 
 ```bash
