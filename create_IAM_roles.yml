@@ -18,6 +18,7 @@ Resources:
             Service: [application-autoscaling.amazonaws.com]
           Action: ['sts:AssumeRole']
       Path: /
+      RoleName: ecsAutoScalingRole
       Policies:
       - PolicyName: service-autoscaling
         PolicyDocument:
@@ -41,6 +42,7 @@ Resources:
             Service: [ec2.amazonaws.com]
           Action: ['sts:AssumeRole']
       Path: /
+      RoleName: ecsInstanceRole
       Policies:
       - PolicyName: ecs-service
         PolicyDocument:
@@ -74,6 +76,7 @@ Resources:
             Service: [ecs.amazonaws.com]
           Action: ['sts:AssumeRole']
       Path: /
+      RoleName: ecsRole
       Policies:
       - PolicyName: ecs-service
         PolicyDocument:
@@ -109,6 +112,7 @@ Resources:
             Service: [ecs-tasks.amazonaws.com]
           Action: ['sts:AssumeRole']
       Path: /
+      RoleName: ecsTaskExecutionRole
       Policies:
         - PolicyName: AmazonECSTaskExecutionRolePolicy
           PolicyDocument:
