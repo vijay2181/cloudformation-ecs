@@ -77,9 +77,7 @@ Resources:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: /
-      Roles: [ Fn::ImportValue: !Sub ${EnvironmentName}:EC2Role ]
-
-  
+      Roles: [ 'ecsInstanceRole' ]
 
 Outputs:
   ClusterName:
