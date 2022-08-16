@@ -1,4 +1,4 @@
-# Create AWS Infrastructure
+# Creates ECS Ec2 Cluster 
 
 * VPC
 * 2 Public subnets in 2 different AZs
